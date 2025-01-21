@@ -1,4 +1,4 @@
-FROM nikolaik/python-nodejs:python3.10-nodejs20-slim
+FROM nikolaik/python-nodejs:python3.12-nodejs20-slim
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/serverless/github-action"
@@ -13,5 +13,5 @@ LABEL "com.github.actions.color"="red"
 # Install Docker from Docker Inc. repositories.
 RUN curl -sSL https://get.docker.com/ | sh
 
-RUN npm i -g serverless@3.x
+RUN npm i -g serverless@4.x
 ENTRYPOINT ["serverless"]
